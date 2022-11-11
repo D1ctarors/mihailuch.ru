@@ -16,7 +16,13 @@ function scrollTo() {
 }
 scrollTo();
 
-// Закрыть бургер при нажатии на элемент
+function gettingCurrent() {
+ 
+}
+gettingCurrent();
+
+
+
 
 
 
@@ -33,7 +39,6 @@ function giveOpenForBurger() {
 	});
 }
 giveOpenForBurger();
-
 
 // добавление active - НАВИГАЦИЯ
 
@@ -53,7 +58,7 @@ function giveActiveForNavigation() {
 }
 giveActiveForNavigation();
 
-// добавление active - НАВИГАЦИЯ
+// Закрыть бургер при нажатии на элемент
 function closeNavigation() {
 	if (document.documentElement.clientWidth < 992) {
 		const burger = document.getElementById('burger');
