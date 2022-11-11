@@ -24,6 +24,9 @@ function Current() {
 		return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 	};
 
+// Получение валют - https://apilayer.com/marketplace/exchangerates_data-api?live_demo=show
+
+// https://www.youtube.com/watch?v=H65F_dZ3RAI
 
 	function getCurrency() {
 		const CURRENCY_CODE = {
@@ -44,7 +47,7 @@ function Current() {
 		const renderContent = (response) => {
 			const { data } = response;
 
-			console.log(data);
+			// console.log(data);
 
 		}; //не выводит данные, ошибка в получении / построении данных
 
@@ -445,7 +448,7 @@ createStatisticsItem();
 
 // Создание карточки отзыва - ОТЗЫВЫ
 function createReviewsItem() {
-	let defaultPhotoSrc = '/img/reviews/photo/default.png';
+	let defaultPhotoSrc = '../img/reviews/photo/default.png';
 	const dataItem = [{
 		authorPhotoSrc: defaultPhotoSrc,
 
@@ -492,20 +495,20 @@ createReviewsItem();
 function createContactsItem() {
 
 	const dataItem = [{
-		imageSrc: '/img/contacts/phone.svg',
+		imageSrc: '../img/contacts/phone.svg',
 		title: 'Позвоните мне',
 		subtitle: 'Есть вопросы? Я помогу!',
 		linkHref: 'tel:+79526049887',
 		link: '+7 (952) 604-98-87'
 	}, {
-		imageSrc: '/img/contacts/mail.svg',
+		imageSrc: '../img/contacts/mail.svg',
 		title: 'Напишите мне',
 		subtitle: 'Есть идеи?<br>Предложения?<br>Пишите!',
 		linkHref: 'mailto:mihailuch.work@yandex.ru',
 		link: 'mihailuch.work@yandex.ru'
 	},
 	{
-		imageSrc: '/img/contacts/stars.svg',
+		imageSrc: '../img/contacts/stars.svg',
 		title: 'Обратная связь',
 		subtitle: 'Качество<br>выполненной<br>работы',
 		linkHref: '#',
