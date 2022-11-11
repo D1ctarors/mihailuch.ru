@@ -203,7 +203,7 @@
 .dollar {
 	display: flex;
 	align-items: center;
-	justify-content: start;
+	justify-content: center;
 	text-align: center;
 
 	width: 85px;
@@ -212,15 +212,14 @@
 	border-radius: 50%;
 	position: relative;
 
-	span {
-		margin: 0 auto;
+	
 		font-style: normal;
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 27px;
 		text-transform: uppercase;
 
-	}
+	
 
 	@media (max-width: $tablet-big) {
 		width: 72px;
@@ -236,7 +235,7 @@
 
 .dollar {
 	&::after {
-		content: url('../img/currencies/');
+		content: url('../img/currencies/dollar.svg');
 		position: absolute;
 		top: 50%;
 		left: 50%;

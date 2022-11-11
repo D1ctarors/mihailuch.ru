@@ -16,10 +16,85 @@ function scrollTo() {
 }
 scrollTo();
 
-function gettingCurrent() {
- 
+// Получение и отрисовка актуальных курсов валют
+function Current() {
+
+	const getToday = () => {
+		const date = new Date();
+		return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+	};
+
+
+	function getCurrency() {
+		const CURRENCY_CODE = {
+			USD: 'USD',
+			EUR: 'EUR',
+			RUB: 'RUB',
+		};
+
+		var myHeaders = new Headers();
+		myHeaders.append("apikey", "UetsPW3HL9FAuoRxxTpSCzQ7r07YWpmE");
+
+		var requestOptions = {
+			method: 'GET',
+			redirect: 'follow',
+			headers: myHeaders
+		};
+
+		const renderContent = (response) => {
+			const { data } = response;
+
+			console.log(data);
+
+		}; //не выводит данные, ошибка в получении / построении данных
+
+		fetch(`https://api.apilayer.com/exchangerates_data/latest?symbols=${CURRENCY_CODE.RUB}&base=${CURRENCY_CODE.USD}`, requestOptions)
+			.then(renderContent);
+
+		// .then(response => response.text())
+		// .then(result => console.log(result))
+		// .catch(error => console.log('error', error));
+
+	}
+	getCurrency();
+
+
+
+
+
+	const wrapCourse = document.getElementById('course');
+	let dollar = document.getElementById('dollar');
+	let euro = document.getElementById('euro');
+
+	const dataItem = [{
+
+		dollar: '62,59',
+		euro: '63,76',
+		today: getToday()
+	}];
+
+
+	let item = "";
+
+	dataItem.forEach((data => {
+		item +=
+			`
+			<div class="information__currencies" >
+									<div class="dollar" id="dollar">${data.dollar}</div>
+		<div class="euro" id="euro">${data.euro}</div>
+								</div>
+								<p>Актуально на <span class="select">${data.today}</span></p>
+		
+			`;
+	}));
+	wrapCourse.insertAdjacentHTML("afterbegin", item);
+
+
+
+
+
 }
-gettingCurrent();
+Current();
 
 
 
@@ -225,13 +300,13 @@ function createProjectsItem() {
 		linkToBlock: 'пока_не_могу_дать(',
 		filter: 'f_all f_landing',
 	},
-	{
-		photoPrewiew: './img/projects-prev/06.jpg',
-		photoPrewiewAlt: 'aquazond',
-		logoInPrewiew: './img/projects-prev/logo-project/aquazond.png',
-		linkToBlock: 'пока_не_могу_дать(',
-		filter: 'f_all f_landing',
-	},
+	// {
+	// 	photoPrewiew: './img/projects-prev/06.jpg',
+	// 	photoPrewiewAlt: 'aquazond',
+	// 	logoInPrewiew: './img/projects-prev/logo-project/aquazond.png',
+	// 	linkToBlock: 'пока_не_могу_дать(',
+	// 	filter: 'f_all f_landing',
+	// },
 	{
 		photoPrewiew: './img/projects-prev/05.jpg',
 		photoPrewiewAlt: 'discounts',

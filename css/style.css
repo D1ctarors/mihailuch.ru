@@ -143,7 +143,7 @@ h6 {
   right: -20px;
   width: 20px;
   height: 20px;
-  background: url("./img/arrDown_light.svg");
+  background: url("../img/arrDown_light.svg");
 }
 
 .information {
@@ -277,19 +277,15 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   width: 85px;
   height: 85px;
   background: rgba(217, 217, 217, 0.1);
   border-radius: 50%;
   position: relative;
-}
-.euro span,
-.dollar span {
-  margin: 0 auto;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -310,7 +306,7 @@ h6 {
 }
 
 .dollar::after {
-  content: url("/img/currencies/");
+  content: url("../img/currencies/dollar.svg");
   position: absolute;
   top: 50%;
   left: 50%;
@@ -515,7 +511,7 @@ h6 {
 }
 .aboutMe__text ul li::before {
   position: absolute;
-  content: url("./img/circle.svg");
+  content: url("../img/circle.svg");
   top: 50%;
   left: 0;
   -webkit-transform: translate(0, -50%);
@@ -535,7 +531,7 @@ h6 {
 }
 
 .skills {
-  background: url("/img/bg-sections/skills.png") center/cover no-repeat;
+  background: url("../img/bg-sections/skills.png") center/cover no-repeat;
 }
 .skills__wrapper {
   display: -webkit-box;
@@ -859,7 +855,7 @@ canvas {
   position: relative;
 }
 .projects-content__close {
-  content: url("./img/Close_MD.svg");
+  content: url("../img/Close_MD.svg");
   position: absolute;
   top: 15px;
   right: 15px;
@@ -997,7 +993,7 @@ canvas {
 }
 .achievements__reviews {
   min-height: 50vh;
-  background: url("./img/bg-sections/reviews.png") bottom/cover no-repeat;
+  background: url("../img/bg-sections/reviews.png") bottom/cover no-repeat;
   -webkit-box-shadow: inset 0px 0px 15px 15px #000000;
           box-shadow: inset 0px 0px 15px 15px #000000;
 }
@@ -1129,13 +1125,13 @@ canvas {
   display: flex;
 }
 .reviews-slider::before {
-  content: url("./img/reviews/left.svg");
+  content: url("../img/reviews/left.svg");
   position: absolute;
   top: 0;
   left: 0;
 }
 .reviews-slider::after {
-  content: url("./img/reviews/right.svg");
+  content: url("../img/reviews/right.svg");
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1237,7 +1233,7 @@ canvas {
   height: 35px;
 }
 .slick-prev::before {
-  content: url("./img/reviews/Chevron_Left_Duo.svg");
+  content: url("../img/reviews/Chevron_Left_Duo.svg");
   font-family: none;
   font-size: none;
   line-height: none;
@@ -1249,7 +1245,7 @@ canvas {
   height: 35px;
 }
 .slick-next::before {
-  content: url("./img/reviews/Chevron_Right_Duo.svg");
+  content: url("../img/reviews/Chevron_Right_Duo.svg");
   font-family: none;
   font-size: 20px;
   line-height: 1;
@@ -1306,7 +1302,7 @@ canvas {
   }
 }
 .contacts {
-  background: url("./img/bg-sections/contacts.png") center/cover no-repeat;
+  background: url("../img/bg-sections/contacts.png") center/cover no-repeat;
 }
 .contacts__content {
   position: relative;
