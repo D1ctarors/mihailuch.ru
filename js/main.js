@@ -448,7 +448,7 @@ createStatisticsItem();
 
 // Создание карточки отзыва - ОТЗЫВЫ
 function createReviewsItem() {
-	let defaultPhotoSrc = '../img/reviews/photo/default.png';
+	let defaultPhotoSrc = './img/reviews/photo/default.png';
 	const dataItem = [{
 		authorPhotoSrc: defaultPhotoSrc,
 
@@ -495,20 +495,20 @@ createReviewsItem();
 function createContactsItem() {
 
 	const dataItem = [{
-		imageSrc: '../img/contacts/phone.svg',
+		imageSrc: './img/contacts/phone.svg',
 		title: 'Позвоните мне',
 		subtitle: 'Есть вопросы? Я помогу!',
 		linkHref: 'tel:+79526049887',
 		link: '+7 (952) 604-98-87'
 	}, {
-		imageSrc: '../img/contacts/mail.svg',
+		imageSrc: './img/contacts/mail.svg',
 		title: 'Напишите мне',
 		subtitle: 'Есть идеи?<br>Предложения?<br>Пишите!',
 		linkHref: 'mailto:mihailuch.work@yandex.ru',
 		link: 'mihailuch.work@yandex.ru'
 	},
 	{
-		imageSrc: '../img/contacts/stars.svg',
+		imageSrc: './img/contacts/stars.svg',
 		title: 'Обратная связь',
 		subtitle: 'Качество<br>выполненной<br>работы',
 		linkHref: '#',
