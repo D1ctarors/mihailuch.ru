@@ -29,7 +29,7 @@
 	&__reviews {
 
 		min-height: 50vh;
-		background: url('./img/bg-sections/reviews.png') bottom/cover no-repeat;
+		background: url('../img/bg-sections/reviews.png') bottom/cover no-repeat;
 		box-shadow: inset 0px 0px 15px 15px $black-color;
 
 	}
@@ -141,14 +141,14 @@
 	display: flex;
 
 	&::before {
-		content: url('./img/reviews/left.svg');
+		content: url('../img/reviews/left.svg');
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 
 	&::after {
-		content: url('./img/reviews/right.svg');
+		content: url('../img/reviews/right.svg');
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -258,7 +258,7 @@
 	height: 35px;
 
 	&::before {
-		content: url('./img/reviews/Chevron_Left_Duo.svg');
+		content: url('../img/reviews/Chevron_Left_Duo.svg');
 		font-family: none;
 		font-size: none;
 		line-height: none;
@@ -272,7 +272,7 @@
 	height: 35px;
 
 	&::before {
-		content: url('./img/reviews/Chevron_Right_Duo.svg');
+		content: url('../img/reviews/Chevron_Right_Duo.svg');
 		font-family: none;
 		font-size: 20px;
 		line-height: 1;
