@@ -1,0 +1,103 @@
+.greetings {
+
+
+	background: url('../img/bg-sections/startPage.png') center/cover no-repeat;
+
+
+}
+
+.greetings-content {
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__title {
+		margin-bottom: 35px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 21px;
+
+		h2 {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 21px;
+			color: $white-color;
+		}
+
+		h1 {
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 53px;
+			letter-spacing: 1.5px;
+
+			span {
+				color: $purple-color;
+				font-family: sans-serif;
+			}
+		}
+	}
+
+	&__scroll {
+		display: block;
+		cursor: pointer;
+		border: 2px solid #fff;
+		border-radius: 17px;
+		height: 35px;
+		width: 22px;
+		display: block;
+		z-index: 10;
+	}
+}
+
+.wheel {
+	position: relative;
+	border-radius: 4px;
+	background: #fff;
+	width: 2px;
+	height: 7px;
+	margin: auto;
+	animation-name: wheel;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+@-webkit-keyframes wheel {
+	0% {
+		top: 3px;
+		opacity: 0;
+	}
+
+	30% {
+		top: 10px;
+		opacity: 1;
+	}
+
+	100% {
+		top: 18px;
+		opacity: 0;
+	}
+}
+
+@keyframes wheel {
+	0% {
+		top: 3px;
+		opacity: 0;
+	}
+
+	30% {
+		top: 10px;
+		opacity: 1;
+	}
+
+	100% {
+		top: 18px;
+		opacity: 0;
+	}
+}

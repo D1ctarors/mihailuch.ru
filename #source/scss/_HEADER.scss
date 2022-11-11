@@ -1,0 +1,266 @@
+.header {
+
+	position: absolute;
+	width: 100%;
+
+	&__body {
+		// height: 120px;
+		padding-top: 25px;
+		display: flex;
+		justify-content: space-between;
+		// align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-self: start;
+		gap: 8px;
+		z-index: 2;
+
+		img {
+			width: 95px;
+			height: 51px;
+			display: block;
+		}
+
+		a {
+			display: block;
+		}
+
+		// margin-right: 8px;
+	}
+
+	&__information {
+		display: flex;
+
+	}
+}
+
+
+
+.lang-switcher {
+	align-self: end;
+	margin-bottom: 4px;
+
+	display: block;
+
+	// margin-top: auto;
+	font-weight: 400;
+	font-size: 32px;
+
+	text-transform: uppercase;
+	color: $purple-color;
+
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 50%;
+		transform: translate(0, -50%);
+		right: -20px;
+		width: 20px;
+		height: 20px;
+		background: url("./img/arrDown_light.svg");
+	}
+}
+
+.information {
+	z-index: 2;
+
+	&__weather {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $tablet-big) {
+			align-items: start;
+		}
+	}
+
+	&__course {
+		display: flex;
+		flex-direction: column;
+
+
+		p {
+
+
+			margin-top: 20px;
+			text-align: right;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 19px;
+
+
+		}
+	}
+
+	&__currencies {
+		display: flex;
+		gap: 15px;
+		margin-left: 30px;
+		// flex-wrap: wrap;
+	}
+
+	@media (max-width: $tablet-big) {
+		display: none;
+	}
+}
+
+.weather {
+
+	&__img {
+
+		img {
+			width: 116px;
+			height: 120px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__temperature {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 33px;
+		// text-transform: capitalize;
+		opacity: .75;
+
+		sup {
+			color: $purple-color;
+		}
+
+	}
+
+	&__location {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 19px;
+
+	}
+
+	&__status {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 16px;
+		color: $blueGray-color;
+	}
+
+	@media (max-width: $tablet-big) {
+
+		&__img {
+			margin-right: 10px;
+
+			img {
+				width: 96px;
+				height: 100px;
+			}
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+
+		&__temperature {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 32px;
+			opacity: .75;
+
+			sup {
+				color: $purple-color;
+			}
+
+		}
+
+		&__location {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+
+		}
+
+		&__status {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 24px;
+			color: $blueGray-color;
+		}
+	}
+
+
+}
+
+.euro,
+.dollar {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	text-align: center;
+
+	width: 85px;
+	height: 85px;
+	background: rgba(217, 217, 217, 0.1);
+	border-radius: 50%;
+	position: relative;
+
+	span {
+		margin: 0 auto;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 27px;
+		text-transform: uppercase;
+
+	}
+
+	@media (max-width: $tablet-big) {
+		width: 72px;
+		height: 72px;
+
+		span {
+			font-size: 18px;
+			line-height: 27px;
+		}
+	}
+
+}
+
+.dollar {
+	&::after {
+		content: url('/img/currencies/');
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@media (max-width: $tablet-big) {}
+	}
+}
+
+.euro {
+	&::after {
+		content: url('../img/currencies/euro.svg');
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@media (max-width: $tablet-big) {}
+	}
+}
+
+
+
+
+
+
+@media (max-width: $mobile) {}

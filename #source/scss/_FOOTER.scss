@@ -1,0 +1,19 @@
+.footer {
+	background: $black-color;
+
+
+	&__body {
+		height: 85px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		span {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 21px;
+			text-align: right;
+			color: $white-color;
+		}
+	}
+}

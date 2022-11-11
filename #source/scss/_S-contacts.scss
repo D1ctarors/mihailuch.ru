@@ -1,0 +1,156 @@
+.contacts {
+	background: url('./img/bg-sections/contacts.png') center/cover no-repeat;
+
+	&__content {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: 25px 0;
+	}
+
+
+}
+
+.item-contacts {
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex: 1 1 240px;
+	// max-width: 240px;
+	min-height: 230px;
+
+	&:nth-child(2) {
+		.item-contacts__image {
+			img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+
+
+	}
+
+	&__image {
+		background-color: $black-color;
+
+		width: 95px;
+		height: 95px;
+		position: relative;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 15px;
+
+
+
+
+		img {
+
+			position: absolute;
+			display: block;
+			width: 50px;
+			height: 50px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__title {
+		// margin-bottom: 5px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 1px;
+		color: $pink-color;
+
+	}
+
+	&__subtitle {
+		flex: 1 1 auto;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: 1px;
+		color: $white-color;
+		width: 100%;
+		overflow-wrap: break-word;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		letter-spacing: 1.5px;
+		color: $blueGray-color;
+		transition: all .2s ease;
+		margin-top: 5px;
+
+		&:hover {
+			color: $pink-color;
+			font-size: 18px;
+		}
+	}
+}
+
+.contacts-link {
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+	gap: 50px;
+	padding: 0 0 25px 0;
+
+	&__item {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		width: 45px;
+		height: 45px;
+		border-radius: 10px;
+		background: $white-color;
+		transition: all .2s ease;
+
+
+
+		img {
+			transition: all .2s ease;
+			position: absolute;
+			display: block;
+			width: 32px;
+			height: 32px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+
+		&:hover {
+			border-radius: 50%;
+
+			img {
+				width: 56px;
+				height: 56px;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.contacts__content {
+		padding: 50px 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	.contacts-link {
+		margin-top: 50px;
+		gap: 50px;
+	}
+}

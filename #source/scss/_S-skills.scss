@@ -1,0 +1,94 @@
+.skills {
+	background: url('/img/bg-sections/skills.png') center/cover no-repeat;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+
+	}
+
+	&__item {
+		flex: 1 1 33.333%;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		display: flex;
+		margin-bottom: 25px;
+		padding: 0 100px;
+
+		@media (max-width: $tablet-big) {
+			padding: 0 80px;
+		}
+
+
+
+	}
+
+	&__item-bg {
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 700;
+		font-size: 150px;
+		line-height: 199px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: rgba(211, 211, 211, 0.233);
+		z-index: -1;
+
+		@media (max-width: $tablet-big) {
+			font-size: 120px;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 90px;
+		}
+	}
+
+
+}
+
+.counter {
+	display: inline-flex;
+
+	width: 210px;
+	height: 210px;
+	max-width: 100%;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 64px;
+	transition: height .2s ease-in-out;
+	border-radius: 50%;
+
+	@media (max-width: $mobile) {
+		font-size: 42px;
+		width: 185px;
+		height: 185px;
+	}
+
+}
+
+.percentage {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 0;
+	right: 0;
+	vertical-align: middle;
+	transform: translate3d(0, -50%, 0);
+
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
