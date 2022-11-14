@@ -132,7 +132,14 @@
 		flex-direction: column;
 		gap: 15px;
 		padding: 25px;
+
+		@media (max-width: $mobile) {
+			padding: 25px 0;
+		}
+
+
 	}
+
 }
 
 .reviews-slider {
@@ -154,13 +161,15 @@
 		right: 0;
 	}
 
+	@media (max-width: $mobile) {
+		padding: 15px;
 
-	&__review {
-		// display: flex;
-
-		// align-items: center;
-		// gap: 100px;
+		&::before,
+		&::after {
+			// display: none;
+		}
 	}
+
 }
 
 .review {
@@ -280,6 +289,7 @@
 	}
 }
 
+
 @media (max-width: $tablet-big) {
 	.review {
 		&__content {
@@ -342,5 +352,21 @@
 
 	.review__content {
 		flex: 1 1 100%;
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.slick-prev,
+	.slick-next {
+		display: none;
+			z-index: -3;
+			visibility: hidden;
+		&::before {
+			display: none;
+			z-index: -3;
+			visibility: hidden;
+		}
+
 	}
 }

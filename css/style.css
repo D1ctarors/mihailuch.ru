@@ -1116,6 +1116,11 @@ canvas {
   gap: 15px;
   padding: 25px;
 }
+@media (max-width: 480px) {
+  .reviews__body {
+    padding: 25px 0;
+  }
+}
 
 .reviews-slider {
   position: relative;
@@ -1136,6 +1141,12 @@ canvas {
   bottom: 0;
   right: 0;
 }
+@media (max-width: 480px) {
+  .reviews-slider {
+    padding: 15px;
+  }
+}
+
 .review__author {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1301,6 +1312,20 @@ canvas {
             flex: 1 1 100%;
   }
 }
+@media (max-width: 480px) {
+  .slick-prev,
+.slick-next {
+    display: none;
+    z-index: -3;
+    visibility: hidden;
+  }
+  .slick-prev::before,
+.slick-next::before {
+    display: none;
+    z-index: -3;
+    visibility: hidden;
+  }
+}
 .contacts {
   background: url("../img/bg-sections/contacts.png") center/cover no-repeat;
 }
@@ -1460,6 +1485,7 @@ body {
   font-family: "Exo 2.0";
   height: 100%;
   position: relative;
+  overflow-x: hidden;
   color: #ffffff;
 }
 
