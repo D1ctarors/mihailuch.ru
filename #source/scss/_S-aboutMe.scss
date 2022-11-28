@@ -21,18 +21,23 @@
 	&__image {
 
 		position: relative;
-		background: $blueGray-color;
+		// background: $blueGray-color;
+		background: url('/img/ICU.gif') center;
+
 		width: 450px;
 		height: 450px;
 		border-radius: 50% 50% 15% 15%;
 
 		img {
+			display: none;
+
 			position: absolute;
 			bottom: 0;
 			left: 50%;
 
 			transform: translate(-50%, 0);
 			z-index: 2;
+
 			width: 364px;
 			height: 507px;
 

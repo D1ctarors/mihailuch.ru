@@ -43,7 +43,7 @@ body {
 	// background: $black-color;
 	height: 100%;
 	position: relative;
-	overflow-x: hidden;
+
 	color: $white-color;
 }
 
@@ -138,6 +138,10 @@ body::-webkit-scrollbar {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+			}
+
+			span {
+				display: none;
 			}
 		}
 
@@ -278,6 +282,20 @@ body::-webkit-scrollbar {
 
 			a {
 				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $redPurlpe-color;
+				font-weight: 700;
+
+				svg{
+					display: none;
+				}
+				span{
+					display: block;
+					
+					
+				}
 			}
 
 			border-radius: 10px;
@@ -285,8 +303,10 @@ body::-webkit-scrollbar {
 			&.active {
 				border: 0;
 			}
+
 		}
 	}
+
 
 	.burger {
 		display: block;
@@ -301,4 +321,8 @@ body::-webkit-scrollbar {
 }
 
 
-@media (max-width: $mobile) {}
+@media (max-width: $mobile) {
+	body {
+		overflow-x: hidden;
+	}
+}

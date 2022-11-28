@@ -59,7 +59,7 @@ function Current() {
 		// .catch(error => console.log('error', error));
 
 	}
-	getCurrency();
+	// getCurrency();
 
 
 
@@ -98,13 +98,6 @@ function Current() {
 
 }
 Current();
-
-
-
-
-
-
-
 
 
 // добавление open - БУРГЕР
@@ -275,7 +268,6 @@ function workProgressBarCircle() { //Взял с инета
 }
 workProgressBarCircle();
 
-
 // работа фильтров проектов - ПРОЕКТЫ
 function WorkFilter() {
 	$('.filter__item').click(function (event) {
@@ -415,18 +407,17 @@ function createContentProjectsItem() {
 }
 createContentProjectsItem();
 
-
 // Создание карточки статистики - СТАТИСТКА
 function createStatisticsItem() {
 	const dataItem = [{
 		value: '9',
 		title: 'Всего проектов'
 	}, {
-		value: '1',
+		value: '0',
 		title: 'Сейчас в разработке'
 	},
 	{
-		value: '70%',
+		value: '80%',
 		title: 'Качество работы'
 	},
 	];
@@ -444,7 +435,6 @@ function createStatisticsItem() {
 	statisticsWrapper.insertAdjacentHTML("afterbegin", item);
 }
 createStatisticsItem();
-
 
 // Создание карточки отзыва - ОТЗЫВЫ
 function createReviewsItem() {
@@ -511,7 +501,7 @@ function createContactsItem() {
 		imageSrc: './img/contacts/stars.svg',
 		title: 'Обратная связь',
 		subtitle: 'Качество<br>выполненной<br>работы',
-		linkHref: '#',
+		linkHref: 'Тут должен открываться попап, но мне лень его делать :)',
 		link: 'Оставить отзыв'
 	},
 	];
@@ -533,8 +523,6 @@ function createContactsItem() {
 	ContactsWrapper.insertAdjacentHTML("afterbegin", item);
 }
 createContactsItem();
-
-
 
 // перетащить элемент
 function elementWrapping() {

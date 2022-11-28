@@ -32,10 +32,29 @@
 
 	&__information {
 		display: flex;
-
+		
 	}
 }
-
+.dontWork{
+	position: relative;
+	
+	&::before{
+		z-index: 50;
+		content: 'Temporarily not working';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 40px;
+		color: yellowgreen;
+		background: $pink-color;
+		text-align: center;
+		border-radius: 10px;
+		padding: 10px;
+		opacity: 0.9;
+		
+		transform: translate(-50%,-50%);
+	}
+}
 
 
 .lang-switcher {
