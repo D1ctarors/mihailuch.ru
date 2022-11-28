@@ -370,7 +370,7 @@ function createContentProjectsItem() {
 		jointlyText: 'Работа в команде,<br>спасибо <span><a href="https://github.com/genius192x" target="_blank" class= "select" > Genius192x</a></span > ',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
 		usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-		imageSrc: '../img/projects-prev/content-project/Atrium.png',
+		imageSrc: './img/projects-prev/content-project/Atrium.png',
 		filter: '',
 	},
 	];
