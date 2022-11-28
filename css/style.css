@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -127,7 +128,7 @@ h6 {
 }
 .dontWork::before {
   z-index: 50;
-  content: "Temporarily not working";
+  content: "Скоро будет";
   position: absolute;
   top: 50%;
   left: 50%;
