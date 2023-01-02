@@ -118,9 +118,7 @@ h6 {
   display: block;
 }
 .header__information {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .dontWork {
@@ -405,9 +403,10 @@ h6 {
   line-height: 53px;
   letter-spacing: 1.5px;
 }
-.greetings-content__title h1 span {
+.greetings-content__title h1 a {
   color: #8464C7;
   font-family: sans-serif;
+  cursor: default;
 }
 .greetings-content__scroll {
   display: block;
@@ -487,9 +486,10 @@ h6 {
 }
 .aboutMe__image {
   position: relative;
+  background: #79A0C1;
+  background: url("/img/ICU.gif") center;
   width: 450px;
   height: 450px;
-  overflow: hidden;
   border-radius: 50% 50% 15% 15%;
 }
 .aboutMe__image img {
@@ -500,8 +500,6 @@ h6 {
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 3;
-  width: 100%;
-  height: 100%;
 }
 @media (max-width: 768px) {
   .aboutMe__image {
@@ -1192,6 +1190,8 @@ canvas {
   position: relative;
   height: 160px;
   width: 135px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .author__photo img {
   position: absolute;

@@ -35,9 +35,11 @@
 			line-height: 53px;
 			letter-spacing: 1.5px;
 
-			span {
+			a {
+				
 				color: $purple-color;
 				font-family: sans-serif;
+				cursor: default;
 			}
 		}
 	}

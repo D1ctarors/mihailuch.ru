@@ -24,9 +24,9 @@ function Current() {
 		return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 	};
 
-// Получение валют - https://apilayer.com/marketplace/exchangerates_data-api?live_demo=show
+	// Получение валют - https://apilayer.com/marketplace/exchangerates_data-api?live_demo=show
 
-// https://www.youtube.com/watch?v=H65F_dZ3RAI
+	// https://www.youtube.com/watch?v=H65F_dZ3RAI
 
 	function getCurrency() {
 		const CURRENCY_CODE = {
@@ -292,7 +292,7 @@ function createProjectsItem() {
 		photoPrewiew: './img/projects-prev/07.jpg',
 		photoPrewiewAlt: 'atrium',
 		logoInPrewiew: './img/projects-prev/logo-project/atrium.png',
-		linkToBlock: 'пока_не_могу_дать(',
+		linkToBlock: 'http://atrium.edavpolzu.ru/',
 		filter: 'f_all f_landing',
 	},
 	// {
@@ -418,7 +418,7 @@ function createStatisticsItem() {
 	},
 	{
 		value: '80%',
-		title: 'Качество работы'
+		title: 'Красавчик'
 	},
 	];
 	let item = "";
@@ -442,22 +442,23 @@ function createReviewsItem() {
 	const dataItem = [{
 		authorPhotoSrc: defaultPhotoSrc,
 
-		authorName: 'Имя',
-		authorCompany: 'Ваша компания',
-		reviewText: 'Доставка немного подкачала. товар шел около трёх месяцев. качество товара на хорошо, немного торчат нитки. ткань трусов из сетки. сидят хорошо. продавец пообщался со мной. сначала ошибся с размером и заказал меньше,чем нужно и мне вернули деньги за заказ. а потом заказала правильные и боже… это прекрасно. надеюсь с размером я угадал. если хотите прикольный подарок,который вызовет кучу эмоций, то это подходит.',
-	}, {
-		authorPhotoSrc: defaultPhotoSrc,
-
 		authorName: 'Валентин В.В.',
 		authorCompany: 'Аквазонтики',
 		reviewText: 'Не думал что за такую цену я найду такой хороший утюг. Раньше я пользовался утюгом который вообще никак не греется и постоянно отключался. Этот уюг работает прекрасно греется быстро пар работает без приколов. Пар даёт мощный. Хотя есть одн неприятная проблемка, утюг немного неприятный на ощупь.',
 	},
 	{
-		authorPhotoSrc: defaultPhotoSrc,
+		authorPhotoSrc: './img/reviews/photo/trusbl.jpg',
+
+		authorName: 'Имя',
+		authorCompany: 'Ваша компания',
+		reviewText: 'Доставка немного подкачала. товар шел около трёх месяцев. качество товара на хорошо, немного торчат нитки. ткань трусов из сетки. сидят хорошо. продавец пообщался со мной. сначала ошибся с размером и заказал меньше,чем нужно и мне вернули деньги за заказ. а потом заказала правильные и боже… это прекрасно. надеюсь с размером я угадал. если хотите прикольный подарок,который вызовет кучу эмоций, то это подходит.',
+	},
+	{
+		authorPhotoSrc: './img/reviews/photo/meRev.jpg',
 
 		authorName: 'Левченко М.А.',
 		authorCompany: 'ловерСфловерс',
-		reviewText: 'Норм сайт. Но мой ловерФлофер ломается н айпхоне 6',
+		reviewText: 'Норм сайт. Но мой ловерФлофер лучше',
 	},
 	];
 	let item = "";
@@ -502,7 +503,7 @@ function createContactsItem() {
 		title: 'Обратная связь',
 		subtitle: 'Качество<br>выполненной<br>работы',
 		linkHref: 'Тут должен открываться попап, но мне лень его делать :)',
-		link: 'Оставить отзыв'
+		link: ' '
 	},
 	];
 	let item = "";
