@@ -93,12 +93,8 @@ function Current() {
 	wrapCourse.insertAdjacentHTML("afterbegin", item);
 
 
-
-
-
 }
 Current();
-
 
 // добавление open - БУРГЕР
 function giveOpenForBurger() {
@@ -292,49 +288,42 @@ function createProjectsItem() {
 		photoPrewiew: './img/projects-prev/07.jpg',
 		photoPrewiewAlt: 'atrium',
 		logoInPrewiew: './img/projects-prev/logo-project/atrium.png',
-		linkToBlock: 'http://atrium.edavpolzu.ru/',
 		filter: 'f_all f_landing',
 	},
 	// {
 	// 	photoPrewiew: './img/projects-prev/06.jpg',
 	// 	photoPrewiewAlt: 'aquazond',
 	// 	logoInPrewiew: './img/projects-prev/logo-project/aquazond.png',
-	// 	linkToBlock: 'пока_не_могу_дать(',
 	// 	filter: 'f_all f_landing',
 	// },
 	{
 		photoPrewiew: './img/projects-prev/05.jpg',
 		photoPrewiewAlt: 'discounts',
 		logoInPrewiew: './img/projects-prev/logo-project/discounts.png',
-		linkToBlock: 'https://d1ctarors.github.io/discounts/',
 		filter: 'f_all f_pet f_multipage',
 	},
 	{
 		photoPrewiew: './img/projects-prev/04.jpg',
 		photoPrewiewAlt: 'aperture',
 		logoInPrewiew: './img/projects-prev/logo-project/aperture.svg',
-		linkToBlock: 'https://d1ctarors.github.io/aperture/',
 		filter: 'f_all f_landing f_pet',
 	},
 	{
 		photoPrewiew: './img/projects-prev/03.jpg',
 		photoPrewiewAlt: 'mtbiking',
 		logoInPrewiew: './img/projects-prev/logo-project/mtbiking.png',
-		linkToBlock: 'https://d1ctarors.github.io/mtbiking/',
 		filter: 'f_all f_landing f_pet',
 	},
 	{
 		photoPrewiew: './img/projects-prev/02.jpg',
 		photoPrewiewAlt: 'binary',
 		logoInPrewiew: './img/projects-prev/logo-project/binary.svg',
-		linkToBlock: 'https://d1ctarors.github.io/binary/',
 		filter: 'f_all f_landing f_pet',
 	},
 	{
 		photoPrewiew: './img/projects-prev/01.jpg',
 		photoPrewiewAlt: 'activeBox',
 		logoInPrewiew: './img/projects-prev/logo-project/activeBox.png',
-		linkToBlock: 'https://d1ctarors.github.io/activebox/',
 		filter: 'f_all f_landing f_pet',
 	},
 
@@ -348,11 +337,11 @@ function createProjectsItem() {
 		<li class="projects-item ${data.filter}" >
 							<div class="projects-item__inner">
 								<img class="projects-item__prev" src="${data.photoPrewiew}" alt="${data.photoPrewiewAlt}">
-
+								
 								<div class="projects-item__overlay">
 
 									<img src="${data.logoInPrewiew}" alt="">
-									<a href="${data.linkToBlock}" target="_blank"><span>Подробнее</span></a>
+									<button data-info>Подробнее</button>
 								</div>
 							</div>
 						</li>
@@ -364,21 +353,92 @@ createProjectsItem();
 
 // Создание контента проекты - ПРОЕКТЫ-контент
 function createContentProjectsItem() {
-	const dataItem = [{
-		nameProject: 'Атриум',
-		jointlyWatch: 'block',
-		jointlyText: 'Работа в команде,<br>спасибо <span><a href="https://github.com/genius192x" target="_blank" class= "select" > Genius192x</a></span > ',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
-		usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-		imageSrc: './img/projects-prev/content-project/Atrium.png',
-		filter: '',
-	},
-	];
-	let item = "";
-	let Wrapper = document.getElementById("projects-content");
-	dataItem.forEach((data => {
-		item +=
-			`
+
+
+	window.addEventListener('click', function (event) {
+
+		const clear = document.querySelectorAll('.projects-content__body');
+		clear.forEach((item) => {
+			item.remove();
+		});
+
+
+
+		if (event.target.hasAttribute('data-info')) {
+
+			const card = event.target.closest('.projects-item');
+
+
+			const alt = card.querySelector('.projects-item__prev').getAttribute('alt');
+
+			const dataItem = [{
+				nameProject: 'Atrium',
+				jointlyWatch: 'block',
+				jointlyText: 'Работа в команде,<br>спасибо <span><a href="https://github.com/genius192x" target="_blank" class= "select" > Genius192x</a></span > ',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/Atrium.png',
+				filter: '',
+				linkToProject: 'http://atrium.edavpolzu.ru/',
+			},
+			{
+				nameProject: 'discounts',
+				jointlyWatch: 'block',
+				jointlyText: '',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/discounts.png',
+				filter: '',
+				linkToProject: 'https://d1ctarors.github.io/discounts/',
+			},
+			{
+				nameProject: 'Aperture',
+				jointlyWatch: 'block',
+				jointlyText: '',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/aperture.png',
+				filter: '',
+				linkToProject: 'https://d1ctarors.github.io/aperture/',
+			},
+			{
+				nameProject: 'mtBiking',
+				jointlyWatch: 'block',
+				jointlyText: '',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/MT_BIKING.png',
+				filter: '',
+				linkToProject: 'https://d1ctarors.github.io/mtbiking/',
+			},
+			{
+				nameProject: 'Binary',
+				jointlyWatch: 'block',
+				jointlyText: '',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/',
+				filter: '',
+				linkToProject: 'https://d1ctarors.github.io/binary/',
+			},
+			{
+				nameProject: 'activebox',
+				jointlyWatch: 'block',
+				jointlyText: '',
+				description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid rem unde voluptatum repudiandae dolores iusto dignissimos consectetur eaque a.Aperiam, perspiciatis! Architecto eius exercitationem placeat libero iure delectus dolores vel numquam et asperiores.Similique, exercitationem deleniti ut magnam doloribus earum reiciendis quasi dolores dignissimos labore alias ducimus vel a?',
+				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
+				imageSrc: './img/projects-prev/content-project/activebox.png',
+				filter: '',
+				linkToProject: 'https://d1ctarors.github.io/activebox/',
+			},
+			];
+			let item = "";
+			let Wrapper = document.getElementById("projects-content");
+			dataItem.forEach((data => {
+				if (alt.toLowerCase() === data.nameProject.toLowerCase()) {
+
+					item +=
+						`
 		<div class="projects-content__body">
 				<div class="projects-content__close"></div>
 					<div class="projects-content__header">
@@ -390,10 +450,9 @@ function createContentProjectsItem() {
 					</div>
 					<h2 class="projects-content__tools-title">во время работы использовались:</h2>
 					<ul class="projects-content__tools">
-						
 						${data.usedTools}
 					</ul>
-					<a class="projects-content__link" href="#" target="_blank">Ссылка на проект<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<a class="projects-content__link" href="${data.linkToProject}" target="_blank">Ссылка на проект<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M16 0.499999L14.59 1.91L20.17 7.5L-3.93402e-07 7.5L-3.0598e-07 9.5L20.17 9.5L14.58 15.08L16 16.5L24 8.5L16 0.499999Z"
 							fill="#ffffff"></path>
@@ -402,8 +461,16 @@ function createContentProjectsItem() {
 							alt="${data.nameProject}"></div>
 				</div>
 			`;
-	}));
-	Wrapper.insertAdjacentHTML("afterbegin", item);
+				}
+
+			}));
+			Wrapper.insertAdjacentHTML("afterbegin", item);
+
+		}
+		// event.preventDefault();
+	});
+
+
 }
 createContentProjectsItem();
 

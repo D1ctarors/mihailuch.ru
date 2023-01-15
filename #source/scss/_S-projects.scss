@@ -127,7 +127,7 @@
 			max-width: 280px;
 		}
 
-		a {
+		button {
 			display: flex;
 			align-items: center;
 			font-weight: 300;
@@ -138,6 +138,7 @@
 			border: 1px solid $white-color;
 			padding: 0 25px;
 			gap: 30px;
+			background: none;
 
 			svg {
 				width: 25px;
@@ -171,34 +172,34 @@
 
 
 .projects-content {
-	display: none;
+	
 	position: fixed;
 	top: 0;
 	right: 0;
 	height: 100vh;
 	z-index: 75;
-	background: rgb(0, 0, 0, 1);
+	background: rgba(3, 3, 3, 0.95);
 
 	&.open {
 		display: block;
 	}
 
 	&__body {
-		padding: 50px 35px 35px 35px;
+		padding: 35px;
 		display: flex;
 		flex-direction: column;
 		overflow: auto;
-		max-width: 640px;
+		max-width: 500px;
 		height: 100%;
 		position: relative;
 	}
 
 	&__close {
-		content: url('../img/Close_MD.svg');
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		cursor: pointer;
+		// content: url('../img/Close_MD.svg');
+		// position: absolute;
+		// top: 15px;
+		// right: 15px;
+		// cursor: pointer;
 	}
 
 	&__header {
@@ -310,7 +311,7 @@
 	}
 
 	&__image-project {
-		background: $black-color;
+		// background: $black-color;
 
 		img {
 			display: block;

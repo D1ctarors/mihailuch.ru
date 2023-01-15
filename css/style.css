@@ -118,7 +118,9 @@ h6 {
   display: block;
 }
 .header__information {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dontWork {
@@ -126,13 +128,13 @@ h6 {
 }
 .dontWork::before {
   z-index: 50;
-  content: "Скоро будет";
+  content: 'later...';
   position: absolute;
   top: 50%;
   left: 50%;
   font-size: 40px;
-  color: yellowgreen;
-  background: #D67EB6;
+  color: rgb(255, 255, 255);
+  background: #292929a9;
   text-align: center;
   border-radius: 10px;
   padding: 10px;
@@ -807,7 +809,7 @@ canvas {
   max-height: 70px;
   max-width: 280px;
 }
-.projects-item__overlay a {
+.projects-item__overlay button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -822,8 +824,9 @@ canvas {
   border: 1px solid #ffffff;
   padding: 0 25px;
   gap: 30px;
+  background: none;
 }
-.projects-item__overlay a svg {
+.projects-item__overlay button svg {
   width: 25px;
   height: 25px;
 }
@@ -849,19 +852,18 @@ canvas {
 }
 
 .projects-content {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   z-index: 75;
-  background: rgb(0, 0, 0);
+  background: rgba(3, 3, 3, 0.95);
 }
 .projects-content.open {
   display: block;
 }
 .projects-content__body {
-  padding: 50px 35px 35px 35px;
+  padding: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,16 +872,9 @@ canvas {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: auto;
-  max-width: 640px;
+  max-width: 500px;
   height: 100%;
   position: relative;
-}
-.projects-content__close {
-  content: url("../img/Close_MD.svg");
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  cursor: pointer;
 }
 .projects-content__header {
   display: -webkit-box;
@@ -971,9 +966,6 @@ canvas {
 }
 .projects-content__link:hover, .projects-content__link:active {
   padding: 5px 50px 5px 0;
-}
-.projects-content__image-project {
-  background: #000000;
 }
 .projects-content__image-project img {
   display: block;
