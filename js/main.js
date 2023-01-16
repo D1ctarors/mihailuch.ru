@@ -17,6 +17,24 @@ function scrollTo() {
 scrollTo();
 
 // Получение и отрисовка актуальных курсов валют
+function CBR_XML_Daily_Ru(rates) {
+	function trend(current, previous) {
+		// if (current > previous) return ' ▲';
+		// if (current < previous) return ' ▼';
+		return '';
+	}
+
+	var USDrate = rates.Valute.USD.Value.toFixed(2).replace('.', ',');
+	var USD = document.getElementById('USD');
+	USD.innerHTML = USD.innerHTML.replace('00,0000', USDrate);
+	USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
+
+	var EURrate = rates.Valute.EUR.Value.toFixed(2).replace('.', ',');
+	var EUR = document.getElementById('EUR');
+	EUR.innerHTML = EUR.innerHTML.replace('00,0000', EURrate);
+	EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
+}
+
 function Current() {
 
 	const getToday = () => {
@@ -39,8 +57,8 @@ function Current() {
 		item +=
 			`
 			<div class="information__currencies" >
-									<div class="dollar" id="USD">00,0000 ₽</div>
-		<div class="euro" id="EUR">00,0000 ₽</div>
+									<div class="dollar" id="USD">00,0000<sub>₽</sub></div>
+		<div class="euro" id="EUR">00,0000<sub>₽</sub></div>
 								</div>
 								<p>Актуально на <span class="select">${data.today}</span></p>
 		

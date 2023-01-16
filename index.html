@@ -12,32 +12,12 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="./fonts/FontsStyle.css" rel="stylesheet">
 
-
-	<script>
-		function CBR_XML_Daily_Ru(rates) {
-			function trend(current, previous) {
-				// if (current > previous) return ' ▲';
-				// if (current < previous) return ' ▼';
-				return '';
-			}
-
-			var USDrate = rates.Valute.USD.Value.toFixed(1).replace('.', ',');
-			var USD = document.getElementById('USD');
-			USD.innerHTML = USD.innerHTML.replace('00,0000', USDrate);
-			USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
-
-			var EURrate = rates.Valute.EUR.Value.toFixed(1).replace('.', ',');
-			var EUR = document.getElementById('EUR');
-			EUR.innerHTML = EUR.innerHTML.replace('00,0000', EURrate);
-			EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
-		}
-	</script>
-
 	<link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
 	<script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
 
 	<!-- <link rel="icon" href="./img/Logo.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> -->
+
 	<title>Mihailuch.ru</title>
 </head>
 
@@ -46,7 +26,6 @@
 	<div class="wrapper">
 
 		<main class="main">
-			<!-- Навигация -->
 			<ul class="navigation" id="navigation">
 				<li class="navigation__item">
 					<a class="active" href="#greetings"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -116,7 +95,6 @@
 
 			</div>
 
-			<!-- Шапка -->
 			<header class="header">
 				<div class="container">
 					<div class="header__body">
@@ -127,7 +105,7 @@
 
 						<div class="header__information information">
 							<div class="information__weather" id="weather">
-								
+
 							</div>
 							<div class="information__course" id="course">
 
@@ -143,7 +121,6 @@
 				</div>
 			</header>
 
-			<!-- Приветствие -->
 			<section class="greetings full-screen" id="greetings">
 				<section class="greetings-content full-screen__content">
 					<div class="container">
@@ -167,7 +144,6 @@
 				</section>
 			</section>
 
-			<!-- Обо мне -->
 			<section class="aboutMe full-screen" id="aboutMe">
 
 				<div class="aboutMe__body full-screen__content">
@@ -207,7 +183,6 @@
 				</div>
 			</section>
 
-			<!-- Навыки -->
 			<section class="skills full-screen" id="skills">
 				<div class="full-screen__content">
 					<div class="container">
@@ -235,7 +210,6 @@
 
 			</section>
 
-			<!-- Проекты -->
 			<section class="projects full-screen" id="projects">
 				<div class="full-screen__content">
 
@@ -260,7 +234,6 @@
 
 			</section>
 
-			<!-- Достижения -->
 			<section class="achievements full-screen" id="achievements">
 				<div class="achievements__content">
 
@@ -292,7 +265,6 @@
 
 			</section>
 
-			<!-- Контакты -->
 			<section class="contacts full-screen" id="contacts">
 				<div class="contacts__content">
 					<h2 class="section-title">Контактные данные</h2>
@@ -313,9 +285,8 @@
 				</div>
 			</section>
 
-
-
 		</main>
+
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__body">
@@ -333,14 +304,11 @@
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/slick/slick/slick.min.js"></script>
-
+	<script type="text/javascript" src="./slick/slick/slick.min.js"></script>
 	<script type="text/javascript">
 		$('.reviews-slider').slick({
-			// infinite: true,
 		});
 	</script>
-	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 
 </body>
 
