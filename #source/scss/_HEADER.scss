@@ -33,27 +33,27 @@
 	&__information {
 		display: flex;
 		// display: none;
-		
+
 	}
 }
-.dontWork{
+
+.dontWork {
 	position: relative;
-	
-	&::before{
+
+	&::before {
 		z-index: 50;
-		content: 'Скоро будет';
+		content: 'later...';
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		font-size: 40px;
-		color: yellowgreen;
-		background: $pink-color;
+		color: rgb(255, 255, 255);
+		background: #292929a9;
 		text-align: center;
 		border-radius: 10px;
 		padding: 10px;
 		opacity: 0.9;
-		
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -232,14 +232,14 @@
 	border-radius: 50%;
 	position: relative;
 
-	
-		font-style: normal;
-		font-weight: 400;
-		font-size: 20px;
-		line-height: 27px;
-		text-transform: uppercase;
 
-	
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	text-transform: uppercase;
+
+
 
 	@media (max-width: $tablet-big) {
 		width: 72px;

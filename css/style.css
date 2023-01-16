@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -128,13 +127,13 @@ h6 {
 }
 .dontWork::before {
   z-index: 50;
-  content: 'later...';
+  content: "later...";
   position: absolute;
   top: 50%;
   left: 50%;
   font-size: 40px;
   color: rgb(255, 255, 255);
-  background: #292929a9;
+  background: rgba(41, 41, 41, 0.662745098);
   text-align: center;
   border-radius: 10px;
   padding: 10px;
@@ -858,9 +857,18 @@ canvas {
   height: 100vh;
   z-index: 75;
   background: rgba(3, 3, 3, 0.95);
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
-.projects-content.open {
+d .projects-content.open {
   display: block;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .projects-content__body {
   padding: 35px;

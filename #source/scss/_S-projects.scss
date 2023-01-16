@@ -9,8 +9,6 @@
 		// flex-direction: row-reverse;
 	}
 
-
-
 }
 
 .filter {
@@ -172,16 +170,20 @@
 
 
 .projects-content {
-	
+
 	position: fixed;
 	top: 0;
 	right: 0;
 	height: 100vh;
 	z-index: 75;
 	background: rgba(3, 3, 3, 0.95);
+	// transform: translateX(100%);
+	transition: all .25s ease;
 
-	&.open {
+	d &.open {
 		display: block;
+		transform: translateX(0);
+		transition: all .25s ease;
 	}
 
 	&__body {
@@ -192,6 +194,9 @@
 		max-width: 500px;
 		height: 100%;
 		position: relative;
+
+
+
 	}
 
 	&__close {
