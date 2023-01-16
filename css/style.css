@@ -214,9 +214,14 @@ h6 {
   }
 }
 
+.weather__img {
+  margin-right: 15px;
+}
 .weather__img img {
   width: 116px;
   height: 120px;
+  width: 70px;
+  height: 70px;
 }
 .weather__info {
   display: -webkit-box;
@@ -239,7 +244,7 @@ h6 {
   color: #8464C7;
 }
 .weather__location {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
   line-height: 19px;
 }
@@ -248,6 +253,8 @@ h6 {
   font-size: 18px;
   line-height: 16px;
   color: #79A0C1;
+  max-width: 100px;
+  font-weight: 500;
 }
 @media (max-width: 992px) {
   .weather__img {
@@ -309,8 +316,8 @@ h6 {
   position: relative;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 24px;
+  line-height: 36px;
   text-transform: uppercase;
 }
 @media (max-width: 992px) {
@@ -1144,22 +1151,10 @@ d .projects-content.open {
 
 .reviews-slider {
   position: relative;
-  padding: 40px;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.reviews-slider::before {
-  content: url("../img/reviews/left.svg");
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.reviews-slider::after {
-  content: url("../img/reviews/right.svg");
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 @media (max-width: 480px) {
   .reviews-slider {
@@ -1576,28 +1571,27 @@ body::-webkit-scrollbar {
   height: auto;
   gap: 15px;
 }
-.navigation__item {
-  background: #ffffff;
-  overflow: hidden;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 1px solid #ffffff;
-}
-.navigation__item.active {
-  background: #8464C7;
-  border: 7px solid #8464C7;
-}
-.navigation__item.active a svg path {
-  fill: #ffffff;
-}
 .navigation__item a {
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  border: 1px solid #ffffff;
   display: block;
   width: 40px;
   height: 40px;
   position: relative;
   padding-right: 15px;
+}
+.navigation__item a.active {
+  background: #8464C7;
+  border: 7px solid #8464C7;
+  width: 55px;
+  height: 55px;
+}
+.navigation__item a.active svg path {
+  fill: #ffffff;
 }
 .navigation__item a svg {
   position: absolute;
@@ -1742,10 +1736,11 @@ body::-webkit-scrollbar {
     text-transform: uppercase;
   }
   .navigation__item {
-    width: 75%;
-    border-radius: 10px;
+    display: block;
+    width: 40%;
   }
   .navigation__item a {
+    padding-right: 0;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1758,15 +1753,19 @@ body::-webkit-scrollbar {
             align-items: center;
     color: #300E23;
     font-weight: 700;
+    border-radius: 10px;
+  }
+  .navigation__item a.active {
+    border: 0;
+    width: 100%;
+    color: #ffffff;
+    height: 40px;
   }
   .navigation__item a svg {
     display: none;
   }
   .navigation__item a span {
     display: block;
-  }
-  .navigation__item.active {
-    border: 0;
   }
   .burger {
     display: block;

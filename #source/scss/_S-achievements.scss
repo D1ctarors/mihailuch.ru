@@ -144,22 +144,22 @@
 
 .reviews-slider {
 	position: relative;
-	padding: 40px;
+	padding: 30px;
 	display: flex;
 
-	&::before {
-		content: url('../img/reviews/left.svg');
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+	// &::before {
+	// 	content: url('../img/reviews/left.svg');
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// }
 
-	&::after {
-		content: url('../img/reviews/right.svg');
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
+	// &::after {
+	// 	content: url('../img/reviews/right.svg');
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	right: 0;
+	// }
 
 	@media (max-width: $mobile) {
 		padding: 15px;

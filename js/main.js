@@ -24,58 +24,14 @@ function Current() {
 		return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 	};
 
-	// Получение валют - https://apilayer.com/marketplace/exchangerates_data-api?live_demo=show
-
-	// https://www.youtube.com/watch?v=H65F_dZ3RAI
-
-	function getCurrency() {
-		const CURRENCY_CODE = {
-			USD: 'USD',
-			EUR: 'EUR',
-			RUB: 'RUB',
-		};
-
-		var myHeaders = new Headers();
-		myHeaders.append("apikey", "UetsPW3HL9FAuoRxxTpSCzQ7r07YWpmE");
-
-		var requestOptions = {
-			method: 'GET',
-			redirect: 'follow',
-			headers: myHeaders
-		};
-
-		const renderContent = (response) => {
-			const { data } = response;
-
-			// console.log(data);
-
-		}; //не выводит данные, ошибка в получении / построении данных
-
-		fetch(`https://api.apilayer.com/exchangerates_data/latest?symbols=${CURRENCY_CODE.RUB}&base=${CURRENCY_CODE.USD}`, requestOptions)
-			.then(renderContent);
-
-		// .then(response => response.text())
-		// .then(result => console.log(result))
-		// .catch(error => console.log('error', error));
-
-	}
-	// getCurrency();
-
-
-
-
-
 	const wrapCourse = document.getElementById('course');
-	let dollar = document.getElementById('dollar');
-	let euro = document.getElementById('euro');
+	let dollar = document.getElementById('USD');
+	let euro = document.getElementById('EUR');
+
 
 	const dataItem = [{
-
-		dollar: '62,59',
-		euro: '63,76',
 		today: getToday()
 	}];
-
 
 	let item = "";
 
@@ -83,8 +39,8 @@ function Current() {
 		item +=
 			`
 			<div class="information__currencies" >
-									<div class="dollar" id="dollar">${data.dollar}</div>
-		<div class="euro" id="euro">${data.euro}</div>
+									<div class="dollar" id="USD">00,0000 ₽</div>
+		<div class="euro" id="EUR">00,0000 ₽</div>
 								</div>
 								<p>Актуально на <span class="select">${data.today}</span></p>
 		
@@ -92,9 +48,43 @@ function Current() {
 	}));
 	wrapCourse.insertAdjacentHTML("afterbegin", item);
 
-
 }
 Current();
+
+// Получение и отрисовка погоды 
+async function getWeather() {
+
+	const city = 'Таганрог';
+	const lang = 'ru';
+
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=08f2a575dda978b9c539199e54df03b0&units=metric`;
+	const res = await fetch(url);
+	var dataJSON = await res.json();
+
+	const dataItem = [{
+		temp: Math.round(dataJSON.main.temp),
+		city: city,
+		img: dataJSON.weather[0].icon,
+		description: dataJSON.weather[0].description,
+	}];
+
+	const wrapWeather = document.getElementById('weather');
+	let item = "";
+	dataItem.forEach((data => {
+		item +=
+			`
+			<div class="weather__img"><img src="./img/weather/base.png" alt="weather"></img></div>
+								<div class="weather__info">
+									<div class="weather__temperature">${data.temp}<sup> o</sup>C</div>
+									<div class="weather__location">${data.city}</div>
+									<div class="weather__status">${data.description}</div>
+								</div>
+		
+			`;
+	}));
+	wrapWeather.insertAdjacentHTML("afterbegin", item);
+}
+getWeather();
 
 // добавление open - БУРГЕР
 function giveOpenForBurger() {
@@ -108,7 +98,6 @@ function giveOpenForBurger() {
 giveOpenForBurger();
 
 // добавление active - НАВИГАЦИЯ
-
 function giveActiveForNavigation() {
 	const nav = document.getElementById('navigation');
 	const navItem = nav.getElementsByClassName('navigation__item');
@@ -124,6 +113,28 @@ function giveActiveForNavigation() {
 	}
 }
 giveActiveForNavigation();
+
+// Изменение active навигации по блокам
+function autoNavigation() {
+	window.addEventListener('scroll', () => {
+		let scrollDistance = window.scrollY;
+
+		if (window.innerWidth > 768) {
+			document.querySelectorAll('.full-screen').forEach((el, i) => {
+				if (el.offsetTop - document.querySelector('.navigation').clientHeight <= scrollDistance) {
+					document.querySelectorAll('.navigation__item a').forEach((el) => {
+						if (el.classList.contains('active')) {
+							el.classList.remove('active');
+						}
+					});
+
+					document.querySelectorAll('.navigation__item')[i].querySelector('a').classList.add('active');
+				}
+			});
+		}
+	});
+}
+autoNavigation();
 
 // Закрыть бургер при нажатии на элемент
 function closeNavigation() {
@@ -305,7 +316,7 @@ function createProjectsItem() {
 	{
 		photoPrewiew: './img/projects-prev/08.jpg',
 		photoPrewiewAlt: 'mys',
-		logoInPrewiew: './img/projects-prev/logo-project/mys.svg',
+		logoInPrewiew: './img/projects-prev/logo-project/mys.jpg',
 		filter: 'f_all f_landing f_pet',
 	},
 	{
@@ -359,6 +370,10 @@ createProjectsItem();
 
 // Создание контента проекты - ПРОЕКТЫ-контент
 function createContentProjectsItem() {
+
+	// const btn = document.querySelectorAll(.)
+
+	// btn.forEach
 
 
 	window.addEventListener('click', function (event) {
@@ -500,8 +515,8 @@ function createStatisticsItem() {
 		title: 'Сейчас в разработке'
 	},
 	{
-		value: '80%',
-		title: 'Красавчик'
+		value: '1%',
+		title: '"Погуляем"'
 	},
 	];
 	let item = "";
