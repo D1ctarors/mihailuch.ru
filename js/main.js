@@ -1,4 +1,22 @@
 
+// перетащить элемент
+function elementWrapping() {
+
+	if (window.innerWidth <= 992) {
+		const weather = document.querySelector('.header__information');
+		const burgerWrap = document.querySelector('.navigation');
+		const weatherWiget = weather.innerHTML;
+		burgerWrap.innerHTML = `${weatherWiget}  ${burgerWrap.innerHTML}`;
+		weather.style.display = "none";
+	}
+
+
+}
+
+window.addEventListener('load', () => {
+	elementWrapping();
+});
+
 // Плавный скролл
 function scrollTo() {
 	const smoothLinks = document.querySelectorAll('a[href^="#"]');
@@ -641,13 +659,4 @@ function createContactsItem() {
 }
 createContactsItem();
 
-// перетащить элемент
-function elementWrapping() {
-	let container = document.querySelector('.container');
-	if (container.innerHTML.width == '768') {
-		console.log('ok');
-	}
 
-	$("#source").prependTo("#destination");
-}
-// elementWrapping();

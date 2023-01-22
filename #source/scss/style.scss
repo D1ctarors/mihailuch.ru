@@ -252,7 +252,7 @@ body::-webkit-scrollbar {
 		position: fixed;
 
 		right: 0;
-		height: 100vh;
+		min-height: 100vh;
 		top: 0;
 		width: 100%;
 		background-color: rgba(0, 0, 0, 1);
