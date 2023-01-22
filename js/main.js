@@ -13,9 +13,9 @@ function elementWrapping() {
 
 }
 
-window.addEventListener('load', () => {
+//window.addEventListener('load', () => {
 	elementWrapping();
-});
+//});
 
 // Плавный скролл
 function scrollTo() {
